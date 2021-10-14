@@ -8,8 +8,8 @@ const header = require('../assets/header_image.png');
 
 export default function Login() {
     let [fontsLoaded] = useFonts({
-        'Titillium Reg': require('../assets/fonts/TitilliumWeb-SemiBold.ttf'),
-        'Titillium': require('../assets/fonts/TitilliumWeb-Bold.ttf'),
+        'Poppins Reg': require("../assets/fonts/Poppins-Regular.ttf"),
+        'Poppins': require("../assets/fonts/Poppins-Bold.ttf"),
     });
 
     if (!fontsLoaded) {
@@ -30,12 +30,12 @@ export default function Login() {
                 marginBottom: 50,
                 transform: [{rotate: '-30deg'}]
             }} />
-            <Text style={{ color: 'rgba(0,0,0,0.8)', fontSize: 24, fontFamily: "Titillium Reg" }}>Welcome To</Text>
+            <Text style={{ color: 'rgba(0,0,0,0.8)', fontSize: 24, fontWeight: '50', fontFamily: "Poppins Reg" }}>Welcome To</Text>
             <Text style={{ 
                 color: 'black', 
                 fontSize: 30, 
-                fontWeight: 500,
-                fontFamily: "Titillium"
+                fontWeight: '500',
+                fontFamily: "Poppins"
                 }}>
                 Power Bike Shop
             </Text>
@@ -68,15 +68,17 @@ export default function Login() {
                 Login with Apple
                 </Text>
             </TouchableOpacity>
+            <TouchableOpacity>
             <Text style={{
                 marginTop: 10,
                 fontWeight: '500',
-                color: 'grey'
+                color: 'grey',
+                flexDirection: 'row',
             }}>
-                Not a member? <TouchableOpacity>
-                    <Text style={{color: "orange", fontWeight: "bold"}}>Sign up</Text>
-                    </TouchableOpacity>
+                Not a member? 
+                    <Text style={{color: "orange", fontSize: 16, fontWeight: "bold"}}> Sign up</Text>
             </Text>
+            </TouchableOpacity>
         </View>
     }
 }
