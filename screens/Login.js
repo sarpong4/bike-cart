@@ -9,7 +9,7 @@ const header = require('../assets/header_image.png');
 export default function Login() {
     let [fontsLoaded] = useFonts({
         'Titillium Reg': require('../assets/fonts/TitilliumWeb-SemiBold.ttf'),
-        'Titillium': require('../assets/fonts/TitiliumWeb-Bold.ttf'),
+        'Titillium': require('../assets/fonts/TitilliumWeb-Bold.ttf'),
     });
 
     if (!fontsLoaded) {
