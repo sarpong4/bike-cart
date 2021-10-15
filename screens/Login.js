@@ -34,7 +34,7 @@ export default function Login() {
             <Text style={{ 
                 color: 'black', 
                 fontSize: 30, 
-                fontWeight: '500',
+                fontWeight: '100',
                 fontFamily: "Poppins"
                 }}>
                 Power Bike Shop
