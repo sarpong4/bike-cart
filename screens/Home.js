@@ -1,5 +1,5 @@
 import React from "react";
-import { Dimensions, Image, ScrollView, Text, View } from "react-native";
+import { Dimensions, Image, ScrollView, Text, Touchable, View } from "react-native";
 import { Entypo, Ionicons, FontAwesome, SimpleLineIcons } from '@expo/vector-icons';
 import AppLoading from 'expo-app-loading';
 import { useFonts } from 'expo-font';
@@ -13,18 +13,9 @@ export default function Home() {
         'Poppins': require('../assets/fonts/Poppins-Bold.ttf'),
     });
 
-    const state = {
-        screenHeight: 0,
-    };
-
-    const onContentSizeChange = (contentWidth, contentHeight) => {
-        state.screenHeight = contentHeight
-    }
-
     if (!fontsLoaded) {
         return <AppLoading />
     } else {
-        const scrollEnabled = state.screenHeight > height;
         return <View style={{flex:1}}><ScrollView horizontal={false} showsHorizontalScrollIndicator={false} >
                 <View style={{ 
                 flex:  1, 
@@ -139,10 +130,10 @@ export default function Home() {
                 borderRadius: 20,
                 paddingTop: 20,
                 paddingLeft: 25
-            }}><Entypo name="home" size={24} color="rgba(255, 100, 10, 0.7)" /></View>
+            }}><TouchableOpacity><Entypo name="home" size={24} color="rgba(255, 100, 10, 0.7)" /></TouchableOpacity></View>
                 <View style={{
                 }}>
-                    <Ionicons name="mic-circle" size={60} color="black" />
+                    <TouchableOpacity><Ionicons name="mic-circle" size={60} color="black" /></TouchableOpacity>
                 </View>
                 <View style={{
                 backgroundColor: "rgba(0, 0, 0, 0.06)",
@@ -150,7 +141,7 @@ export default function Home() {
                 borderRadius: 20,
                 paddingTop: 20,
                 paddingRight: 25
-            }}><SimpleLineIcons name="handbag" size={24} color="black" /></View>
+            }}><TouchableOpacity><SimpleLineIcons name="handbag" size={24} color="black" /></TouchableOpacity></View>
             </View>
         </View>
     }
